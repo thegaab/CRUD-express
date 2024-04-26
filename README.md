@@ -1,11 +1,11 @@
 # CRUD-express
-This project is a simple CRUD application built with Express.js and MongoDB.
+This project is a simple CRUD application built with Express.js and MongoDB. It uses Mongoose, an Object Data Modeling (ODM) library for MongoDB and Node.js, to manage relationships between data, provide schema validation, and translate between objects in code and the representation of those objects in MongoDB.
 
 ## Dependencies
-
-- Node.js: An open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside a web browser.
-- Express.js: A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
-- MongoDB: A source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.
+- [Mongoose](https://mongoosejs.com/): An Object Data Modeling (ODM) library for MongoDB and Node.js. It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB.
+- [Node.js](https://nodejs.org/): An open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside a web browser.
+- [Express.js](https://expressjs.com/): A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+- [MongoDB](https://www.mongodb.com/): A source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.
 
 ## Setup
 
