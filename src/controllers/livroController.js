@@ -13,6 +13,11 @@ class LivroController {
     };
 
     static async listarLivroPorId(req, res) {
+        const id = req.params.id;
+        const livroEncontrado = await livro.findById(id);
+        if (!livroEncontrado) {
+            return res.status(404).json({ message: "Livro não encontrado" });
+        }
         try {
             const id = req.params.id;
             const livroEncontrado = await livro.findById(id);
@@ -72,6 +77,14 @@ class LivroController {
     };
 
     static async listarLivrosPorAutor(req, res) {
+        const autorEncontrado = await autor.findOne({nome: autor});
+        if (!autorEncontrado) {
+            return res.status(404).json({ message: "Autor não encontrado" });
+        }
+        const livrosPorAutor = await livro.find({"autor.nome": autor});
+        if (livrosPorAutor.length === 0) {
+            return res.status(404).json({ message: "Não existem livros para este autor" });
+        }
         const autor = req.query.autor;
         try{
             const livrosPorAutor = await livro.find({"autor.nome": autor});
